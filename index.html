@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. President Pipi - The Baby Boss Token</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Comic+Neue:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #0a0a23 0%, #1a1a3a 50%, #2a1a4a 100%);
+            overflow-x: hidden;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493;
+        }
+        
+        .neon-blue {
+            text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+        }
+        
+        .neon-gold {
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+        }
+        
+        .sparkle {
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
+        .floating-poop {
+            position: fixed;
+            animation: float 8s infinite linear;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px #ff1493; }
+            50% { box-shadow: 0 0 40px #ff1493, 0 0 60px #ff1493; }
+        }
+        
+        .wiggle {
+            animation: wiggle 1s infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
+        }
+        
+        .presidential-seal {
+            border: 5px solid #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 30px #ffd700;
+        }
+        
+        .baby-button {
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            border: 3px solid #ffd700;
+            transition: all 0.3s ease;
+        }
+        
+        .baby-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #ff1493;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen relative">
+    <!-- Floating Poop Animation -->
+    <div class="floating-poop text-4xl" style="left: 10%; animation-delay: 0s;">💩</div>
+    <div class="floating-poop text-3xl" style="left: 30%; animation-delay: 2s;">💩</div>
+    <div class="floating-poop text-5xl" style="left: 50%; animation-delay: 4s;">💩</div>
+    <div class="floating-poop text-3xl" style="left: 70%; animation-delay: 6s;">💩</div>
+    <div class="floating-poop text-4xl" style="left: 90%; animation-delay: 1s;">💩</div>
+
+    <!-- Header -->
+    <header class="text-center py-8 relative z-10">
+        <div class="sparkle text-6xl mb-4">✨🇺🇸✨</div>
+        <img src="https://r.resimlink.com/MzgK2G.png" alt="Mr. President Pipi" class="w-32 h-32 mx-auto presidential-seal mb-6 wiggle">
+        <h1 class="text-6xl font-bold neon-text mb-2" style="font-family: 'Fredoka One', cursive;">MR. PRESIDENT PIPI</h1>
+        <p class="text-2xl neon-gold mb-4">👶 THE BABY BOSS TOKEN 👶</p>
+        <div class="text-4xl sparkle">🦅💎🚀💎🦅</div>
+    </header>
+
+    <!-- Presidential Address Popup -->
+    <div id="presidentialPopup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <div class="bg-gradient-to-br from-blue-900 to-purple-900 p-8 rounded-lg border-4 border-yellow-400 max-w-md mx-4 text-center">
+            <div class="text-6xl mb-4">👶🎤</div>
+            <h3 class="text-2xl font-bold neon-gold mb-4">Presidential Address</h3>
+            <p class="text-lg mb-6">"I have no idea what I'm doing. Vote Pipi."</p>
+            <button onclick="closePopup()" class="baby-button px-6 py-3 rounded-full text-white font-bold">
+                Understood, Mr. President! 🍼
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 relative z-10">
+        <!-- Who TF is Mr. President Pipi -->
+        <section class="mb-16 text-center">
+            <h2 class="text-4xl font-bold neon-blue mb-6">👶 Who TF is Mr. President Pipi?</h2>
+            <div class="bg-gradient-to-r from-purple-900 to-blue-900 p-8 rounded-lg border-4 border-pink-500 pulse-glow max-w-4xl mx-auto">
+                <p class="text-xl leading-relaxed">
+                    He's a baby. He's a boss. He's got a pacifier of gold and policies made of memes. 
+                    He doesn't walk, he waddles—into your wallet. 👑🍼💰
+                </p>
+                <div class="text-6xl mt-4 sparkle">👶💼🏛️</div>
+            </div>
+        </section>
+
+        <!-- Roadmap to Nowhere -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold neon-gold text-center mb-8">📈 Roadmap to Nowhere</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-b from-pink-900 to-red-900 p-6 rounded-lg border-3 border-yellow-400 text-center">
+                    <h3 class="text-2xl font-bold neon-text mb-3">Q1</h3>
+                    <p class="text-lg">Cry a little 😭</p>
+                    <div class="text-4xl mt-3">👶💧</div>
+                </div>
+                <div class="bg-gradient-to-b from-blue-900 to-indigo-900 p-6 rounded-lg border-3 border-yellow-400 text-center">
+                    <h3 class="text-2xl font-bold neon-blue mb-3">Q2</h3>
+                    <p class="text-lg">Take over daycare 🏫</p>
+                    <div class="text-4xl mt-3">👑🧸</div>
+                </div>
+                <div class="bg-gradient-to-b from-purple-900 to-pink-900 p-6 rounded-lg border-3 border-yellow-400 text-center">
+                    <h3 class="text-2xl font-bold neon-text mb-3">Q3</h3>
+                    <p class="text-lg">Launch scepter NFTs nobody asked for 🎭</p>
+                    <div class="text-4xl mt-3">👑💎</div>
+                </div>
+                <div class="bg-gradient-to-b from-green-900 to-teal-900 p-6 rounded-lg border-3 border-yellow-400 text-center">
+                    <h3 class="text-2xl font-bold neon-gold mb-3">Q4</h3>
+                    <p class="text-lg">Poop, pump, and moon 🚀</p>
+                    <div class="text-4xl mt-3">💩🚀🌙</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tokenomics -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold neon-text text-center mb-8">💩 Tokenomics</h2>
+            <div class="bg-gradient-to-r from-indigo-900 to-purple-900 p-8 rounded-lg border-4 border-pink-500 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="text-6xl mb-3">69%</div>
+                        <p class="text-lg">Airdropped to random babies 👶</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-3 neon-blue">20%</div>
+                        <p class="text-lg">Reserved for banana milk research 🍌🥛</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-3 neon-gold">10%</div>
+                        <p class="text-lg">Hidden in diaper 👶💩</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-3 neon-text">1%</div>
+                        <p class="text-lg">For mommy 👩‍👶</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold neon-blue text-center mb-8">🇺🇸 Community: Join the Diaper Force</h2>
+            <div class="bg-gradient-to-r from-red-900 to-blue-900 p-8 rounded-lg border-4 border-yellow-400 text-center max-w-4xl mx-auto">
+                <p class="text-xl mb-6">"Only those brave enough to smell the truth deserve to hold PIPI." 👃💨</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="playGiggle(); window.open('https://t.me/+T1QQHCGPlXA0ZjY0', '_blank')" class="baby-button px-6 py-3 rounded-full text-white font-bold">
+    📱 Telegram
+</button>
+<button onclick="playGiggle(); window.open('https://x.com/mrpresidentpipi', '_blank')" class="baby-button px-6 py-3 rounded-full text-white font-bold">
+    🐦 X (Twitter)
+</button>
+<button onclick="playGiggle()" class="baby-button px-6 py-3 rounded-full text-white font-bold">
+    🏛️ "White House" Discord
+</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold neon-gold text-center mb-8">🚨 Security? We use BabyLocks™</h2>
+            <div class="bg-gradient-to-r from-green-900 to-teal-900 p-8 rounded-lg border-4 border-pink-500 text-center max-w-4xl mx-auto pulse-glow">
+                <p class="text-xl mb-4">"Your funds are as safe as a baby in bubble wrap." 🫧👶🫧</p>
+                <div class="text-6xl sparkle">🔒👶🔒</div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mb-16">
+            <button onclick="showPresidentialAddress()" class="baby-button px-12 py-6 rounded-full text-2xl font-bold wiggle">
+                🚀 BUY $PIPI NOW 🚀
+            </button>
+            <p class="text-sm mt-4 opacity-75">*Not financial advice. This is a baby with a diaper full of dreams.*</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 border-t-4 border-yellow-400">
+        <div class="text-4xl mb-4 sparkle">🦅🇺🇸👶🇺🇸🦅</div>
+        <p class="text-lg neon-text">Mr. President Pipi 2024 - Making Crypto Great Again, One Diaper at a Time</p>
+        <div class="text-6xl mt-4">💩👑💩</div>
+    </footer>
+
+    <script>
+        // Presidential Address Popup
+        function showPresidentialAddress() {
+            document.getElementById('presidentialPopup').classList.remove('hidden');
+            playGiggle();
+        }
+
+        function closePopup() {
+            document.getElementById('presidentialPopup').classList.add('hidden');
+        }
+
+        // Baby Giggle Sound Effect (simulated with visual feedback)
+        function playGiggle() {
+            // Create a temporary visual effect since we can't play audio
+            const giggleEffect = document.createElement('div');
+            giggleEffect.innerHTML = '👶😂';
+            giggleEffect.style.position = 'fixed';
+            giggleEffect.style.top = '50%';
+            giggleEffect.style.left = '50%';
+            giggleEffect.style.transform = 'translate(-50%, -50%)';
+            giggleEffect.style.fontSize = '4rem';
+            giggleEffect.style.zIndex = '9999';
+            giggleEffect.style.pointerEvents = 'none';
+            giggleEffect.style.animation = 'sparkle 1s ease-out';
+            
+            document.body.appendChild(giggleEffect);
+            
+            setTimeout(() => {
+                document.body.removeChild(giggleEffect);
+            }, 1000);
+        }
+
+        // Add more floating poop periodically
+        setInterval(() => {
+            const poop = document.createElement('div');
+            poop.className = 'floating-poop';
+            poop.innerHTML = '💩';
+            poop.style.left = Math.random() * 100 + '%';
+            poop.style.fontSize = (Math.random() * 2 + 2) + 'rem';
+            poop.style.animationDelay = '0s';
+            document.body.appendChild(poop);
+            
+            setTimeout(() => {
+                if (document.body.contains(poop)) {
+                    document.body.removeChild(poop);
+                }
+            }, 8000);
+        }, 3000);
+
+        // Close popup when clicking outside
+        document.getElementById('presidentialPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'967f5d9d21b549da',t:'MTc1Mzk4ODcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
